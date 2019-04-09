@@ -158,6 +158,10 @@ function stepsLinePosition(){
 };
 stepsLinePosition();
 
+$(window).resize(function(){
+  stepsLinePosition();
+})
+
 // form tabs change
 (function(){
 
