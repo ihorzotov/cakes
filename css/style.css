@@ -141,6 +141,94 @@ ul {
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.ttf?3z1puj") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-boy:before {
+  content: "\e900";
+}
+
+.icon-email:before {
+  content: "\e901";
+}
+
+.icon-fb:before {
+  content: "\e902";
+}
+
+.icon-girl:before {
+  content: "\e903";
+}
+
+.icon-inst:before {
+  content: "\e904";
+}
+
+.icon-people:before {
+  content: "\e905";
+}
+
+.icon-phone:before {
+  content: "\e906";
+}
+
+.icon-question:before {
+  content: "\e907";
+}
+
+.icon-skype:before {
+  content: "\e908";
+}
+
+.icon-swipe:before {
+  content: "\e909";
+}
+
+.icon-yt:before {
+  content: "\e90a";
+}
+
+.icon-uniE10A:before {
+  content: "\e711";
+}
+
+.icon-uniE1D9:before {
+  content: "\e1d9";
+}
+
+.icon-uniE830:before {
+  content: "\e830";
+}
+
+.icon-uniE937:before {
+  content: "\e937";
+}
+
+.icon-uniE938:before {
+  content: "\e938";
+}
+
+.icon-uniEA47:before {
+  content: "\ea47";
+}
+
 html.overflow {
   height: auto;
   position: relative;
@@ -1090,6 +1178,10 @@ span, a, label {
   display: none;
 }
 
+.form__nav .nav-btn.nav-btn__prev i {
+  margin: 0 10px 0 0;
+}
+
 .form__nav .nav-btn.nav-btn__prev.disabled {
   visibility: hidden;
   display: block;
@@ -1098,6 +1190,9 @@ span, a, label {
 .form__nav .nav-btn i {
   font-size: 24px;
   font-weight: 400;
+  display: inline-block;
+  margin-left: 10px;
+  transform: translateY(6px);
 }
 
 .form__nav .wb-pink {
@@ -1139,9 +1234,10 @@ span, a, label {
   transition: color .3s;
 }
 
-.form-content__gender .gender-card__img {
-  display: inline-block;
+.form-content__gender .gender-card i {
+  font-size: 80px;
   margin-bottom: 15px;
+  display: inline-block;
 }
 
 .form-content__gender .gender-card .title {
@@ -1389,6 +1485,7 @@ textarea.container-field {
   cursor: pointer;
   margin-left: 10px;
   display: inline-block;
+  transform: translateY(4px);
   line-height: inherit;
 }
 

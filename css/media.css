@@ -509,6 +509,10 @@
     height: 100px;
     width: 100%;
   }
+  .form-content__gender .gender-card i {
+    margin-bottom: 0;
+    font-size: 55px;
+  }
   .form__nav {
     height: auto;
   }

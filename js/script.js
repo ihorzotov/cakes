@@ -54,8 +54,8 @@ APP.$document.ready(function(){
     var defaults = {
         arrows:true,
         dots: true,
-        prevArrow: '<button class="slick-prev slick-arrow" type="button" style=""><i class="icon-arrow1">1</i></button>',
-        nextArrow: '<button class="slick-next slick-arrow" type="button" style=""><i class="icon-arrow2">2</i></button>',
+        prevArrow: '<button class="slick-prev slick-arrow" type="button" style=""><i class="icon-uniE938"></i></button>',
+        nextArrow: '<button class="slick-next slick-arrow" type="button" style=""><i class="icon-uniE937"></i></button>',
         infinite: false,
         speed: 300,
     }

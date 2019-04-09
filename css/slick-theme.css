@@ -12,9 +12,16 @@
   color: #1a1a1a;
   box-shadow: 0px 0px 11.31px 1.69px rgba(0, 0, 0, 0.05);
   transition: color .3s;
-}
-.slick-arrow{
   line-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-next i{
+  margin-left: 10px;
+}
+.slick-prev i{
+  margin-right: 10px;
 }
 /* Dots */
 
