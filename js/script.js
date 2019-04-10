@@ -170,6 +170,12 @@ $(window).resize(function(){
     }
   }
 
+  if(windowWidth < 1139){
+    $('.product-slider__card').bind('touchmove', false);
+  }else{
+    $('.product-slider__card').bind('touchmove', true);
+  }
+  
   stepsLinePosition();
 });
 
@@ -253,6 +259,8 @@ $('.slider-counter').each(function(key, item){
   });
 
 });
+
+
 })//document ready
 
  APP.$document.on('touchstart', '.product-slider__card', handleTouchStart);
