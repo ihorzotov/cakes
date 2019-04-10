@@ -2,7 +2,7 @@
 <html lang="ru" class="overflow">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <title>Document</title>
     <link rel="icon" href="img/fav-ico.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
@@ -12,40 +12,49 @@
 <body>
   <div class="preloader active">
     <img src="img/logo-large.png" class="logo-large" alt="">
+    <div class="wrapper">
+      <img src="img/small-logo.png" class="logo-small" alt="">
+    </div>
   </div>
   <header class="header flex-c"">
     <div class="header-content flex-c">
-      <div class="header-content__logo animate">
-        <div class="logo-container">
-        </div>
+      <div class="header-content__logo flex-c">
+        <img src="img/small-logo.png" class="logo-small" alt="">
       </div>
-      <ul class="header-list flex-c">
-        <li class="header-list__item">
-          <a href="#">О нас</a>
-        </li>
-        <li class="header-list__item">
-          <a href="#">Преимущества</a>
-        </li>
-        <li class="header-list__item">
-          <a href="#">УТП</a>
-        </li>
-        <li class="header-list__item">
-          <a href="#">Insta-галерея</a>
-        </li>
-        <li class="header-list__item">
-          <a href="#">Тортики</a>
-        </li>
-        <li class="header-list__item">
-          <a href="#">Отзывы</a>
-        </li>
-        <li class="header-list__item">
-          <a href="#">Доставка</a>
-        </li>
-      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="header-list flex-c">
+        <ul class="header-list__container flex-c">
+          <li class="header-list__item">
+            <a href="#">О нас</a>
+          </li>
+          <li class="header-list__item">
+            <a href="#">Преимущества</a>
+          </li>
+          <li class="header-list__item">
+            <a href="#">УТП</a>
+          </li>
+          <li class="header-list__item">
+            <a href="#">Insta-галерея</a>
+          </li>
+          <li class="header-list__item">
+            <a href="#">Тортики</a>
+          </li>
+          <li class="header-list__item">
+            <a href="#">Отзывы</a>
+          </li>
+          <li class="header-list__item">
+            <a href="#">Доставка</a>
+          </li>
+        </ul>
+      </div>
       <div class="header-number">
         <a href="tel:8-967-135-51-45">8 (967) 135-51-45</a>
       </div>
-      <a href="#" class="standart-btn js-modal-btn">задать вопрос</a>
+      <a href="#" class="standart-btn js-modal-btn"><span class="dsc-text">задать вопрос</span> <i class="mobile-text icon-question"></i> </a>
     </div>
   </header>
   <main class="main">
@@ -164,7 +173,7 @@
     <div class="main__fifth">
       <div class="wrapper">
         <p class="wb-large">Такие тортики мы уже сделали</p>
-        <div class="example-slider flex-c-c controls-aligner">
+        <div class="example-slider slider-counter flex-c-c controls-aligner">
           <div class="example-card">
             <div class="content-holder flex-s">
               <div class="example-card__img" style="background-image: url(img/product-example__large.jpg);">
@@ -247,7 +256,7 @@
     <div class="main__sixth">
       <div class="wrapper">
         <p class="wb-large">самые вкусные начинки</p>
-        <div class="product-slider flex-c-c controls-aligner">
+        <div class="product-slider slider-counter flex-c-c controls-aligner">
           <div class="product-slider__card">
             <div class="slide-image" style="background-image: url(img/product-slide__img1.png);"></div>
             <div class="product-slider__hover">
@@ -285,7 +294,7 @@
     <div class="main__seventh">
       <div class="wrapper">
         <p class="wb-large">Отзывы клиентов</p>
-        <div class="slider-reviews flex-c-c controls-aligner">
+        <div class="slider-reviews slider-counter flex-c-c controls-aligner">
           <div class="slider-reviews__card">
             <div class="slide-image" style="background-image: url(img/review-example.png);"></div>
           </div>

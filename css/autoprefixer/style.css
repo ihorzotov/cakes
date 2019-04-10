@@ -139,6 +139,94 @@ ul {
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.ttf?3z1puj") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-boy:before {
+  content: "\e900";
+}
+
+.icon-email:before {
+  content: "\e901";
+}
+
+.icon-fb:before {
+  content: "\e902";
+}
+
+.icon-girl:before {
+  content: "\e903";
+}
+
+.icon-inst:before {
+  content: "\e904";
+}
+
+.icon-people:before {
+  content: "\e905";
+}
+
+.icon-phone:before {
+  content: "\e906";
+}
+
+.icon-question:before {
+  content: "\e907";
+}
+
+.icon-skype:before {
+  content: "\e908";
+}
+
+.icon-swipe:before {
+  content: "\e909";
+}
+
+.icon-yt:before {
+  content: "\e90a";
+}
+
+.icon-uniE10A:before {
+  content: "\e711";
+}
+
+.icon-uniE1D9:before {
+  content: "\e1d9";
+}
+
+.icon-uniE830:before {
+  content: "\e830";
+}
+
+.icon-uniE937:before {
+  content: "\e937";
+}
+
+.icon-uniE938:before {
+  content: "\e938";
+}
+
+.icon-uniEA47:before {
+  content: "\ea47";
+}
+
 html.overflow {
   height: auto;
   position: relative;
@@ -421,6 +509,11 @@ span, a, label {
   font-size: 14px;
 }
 
+.header .standart-btn .mobile-text {
+  font-size: 18px;
+  display: none;
+}
+
 /*=============================*/
 /*MAIN*/
 /*=============================*/
@@ -685,6 +778,15 @@ span, a, label {
 }
 
 /*slider*/
+.slide-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
 .slick-list {
   width: -webkit-calc(100% + 30px);
   width: calc(100% + 30px);
@@ -737,6 +839,7 @@ span, a, label {
   width: 48.65%;
   padding-right: 45px;
   position: relative;
+  z-index: 85;
 }
 
 .block-product:before {
@@ -977,14 +1080,20 @@ span, a, label {
 
 /**/
 /*main-sixth content*/
-.product-slider__card {
+.product-slider .slick-slide {
   margin-left: 30px;
+}
+
+.product-slider__card {
   overflow: hidden;
+  border-radius: 15px;
+  height: 360px;
+  position: relative;
+}
+
+.product-slider__card .slide-image {
   background: 50% 50% no-repeat;
   background-size: cover;
-  border-radius: 15px;
-  height: 360px !important;
-  position: relative;
 }
 
 .product-slider__hover {
@@ -1009,7 +1118,10 @@ span, a, label {
   right: 30px;
   top: 30px;
   font-weight: 600;
+  text-align: center;
   font-size: 18px;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
 }
 
 .product-slider__hover .mobile-action i {
@@ -1038,12 +1150,19 @@ span, a, label {
   padding: 0 100px;
 }
 
+.slider-reviews .slick-slide {
+  margin-left: 30px;
+}
+
 .slider-reviews__card {
   height: 500px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.slider-reviews__card .slide-image {
   background: 50% 50% no-repeat;
   background-size: 100% 100%;
-  border-radius: 15px;
-  margin-left: 30px;
 }
 
 .slider-reviews .slick-arrow {
@@ -1139,6 +1258,11 @@ span, a, label {
   position: relative;
 }
 
+.form__nav .spacer {
+  display: none;
+  width: 100%;
+}
+
 .form__nav .nav-btn {
   text-transform: uppercase;
   font-weight: 700;
@@ -1153,6 +1277,10 @@ span, a, label {
   display: none;
 }
 
+.form__nav .nav-btn.nav-btn__prev i {
+  margin: 0 10px 0 0;
+}
+
 .form__nav .nav-btn.nav-btn__prev.disabled {
   visibility: hidden;
   display: block;
@@ -1161,6 +1289,10 @@ span, a, label {
 .form__nav .nav-btn i {
   font-size: 24px;
   font-weight: 400;
+  display: inline-block;
+  margin-left: 10px;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
 }
 
 .form__nav .wb-pink {
@@ -1206,9 +1338,10 @@ span, a, label {
   transition: color .3s;
 }
 
-.form-content__gender .gender-card__img {
-  display: inline-block;
+.form-content__gender .gender-card i {
+  font-size: 80px;
   margin-bottom: 15px;
+  display: inline-block;
 }
 
 .form-content__gender .gender-card .title {
@@ -1476,10 +1609,20 @@ textarea.container-field {
   font-weight: 600;
   font-size: 16px;
   text-transform: lowercase;
-  line-height: 16px;
-  height: 16px;
+  line-height: 20px;
+  height: 20px;
+  width: 100%;
   visibility: hidden;
-  margin: 20px 0 20px 0;
+  margin: 18px 0 18px 0;
+  white-space: nowrap;
+}
+
+.input-file .title .js-file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: -webkit-calc(100% - 26px);
+  max-width: calc(100% - 26px);
 }
 
 .input-file .title.active {
@@ -1491,6 +1634,8 @@ textarea.container-field {
   cursor: pointer;
   margin-left: 10px;
   display: inline-block;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
   line-height: inherit;
 }
 
@@ -1540,6 +1685,7 @@ textarea.container-field {
   margin: -125px 0;
   width: 100%;
   height: 750px;
+  pointer-events: none;
 }
 
 #map .wrapper {
@@ -1673,7 +1819,7 @@ textarea.container-field {
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 102;
   padding: 100px 0 30px 0;
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 .modal.active {

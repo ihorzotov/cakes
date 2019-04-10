@@ -11,13 +11,15 @@ APP.modalContacts = $('.modal-contact');
 APP.closeModal = $('.close-modal');
 APP.zoomBtn = $('.zoom-btn');
 APP.modalZoom = $('.modal-zoom');
-APP.zoomIMG = $('.modal-zoom__image');
+APP.zoomIMG = $('.modal-zoom__image'),
+APP.preloader = $('.preloader');
+APP.hamburger = $('.hamburger');
 
 
 APP.$document.ready(function(){
 
   window.onload = function(){
-    $('.preloader').removeClass('active');
+    APP.preloader.removeClass('active');
     setTimeout(function(){
       APP.HTML.removeClass('overflow');
       $('.main__frst').addClass('animate');
@@ -148,7 +150,6 @@ APP.fileClearBtn.on('click', function(){
   $('.input-file__el').val('');//change to wp form input
 });
 
-
 function stepsLinePosition(){
   var activeElPosition = $('.line-steps__circle.active').position().left + 8;
 
@@ -159,8 +160,18 @@ function stepsLinePosition(){
 stepsLinePosition();
 
 $(window).resize(function(){
+  var windowWidth = $(window).width();
+
+  if(!APP.preloader.hasClass('active')){
+    if (windowWidth < 1366 ) {
+      APP.preloader.hide();
+    }else{
+      APP.preloader.show();
+    }
+  }
+
   stepsLinePosition();
-})
+});
 
 // form tabs change
 (function(){
@@ -216,7 +227,32 @@ APP.formSubmit.on('click', function(){
     checkbox.parent('.container').addClass('disabled');
   }
 });
+
+APP.hamburger.on('click', function(){
+  var content = $('.header-content, .block-product');
+
+  content.toggleClass('active');
+  APP.HTML.toggleClass('overflow mobile');
+});
 // 
+
+function currentSlideCount(item){
+  var dotsLenght = $(item).find('.slick-dots li').length,
+      activeIndex = $(item).find('.slick-dots li.slick-active').index() + 1;
+
+  $(item).find('.slick-dots').attr('data-lenght',dotsLenght);
+  $(item).find('.slick-dots').attr('data-current',activeIndex);
+}
+
+$('.slider-counter').each(function(key, item){
+
+  currentSlideCount(item)
+
+  $(item).on('afterChange', function(event, slick, currentSlide, nextSlide){
+    currentSlideCount(item)
+  });
+
+});
 })//document ready
 
  APP.$document.on('touchstart', '.product-slider__card', handleTouchStart);
