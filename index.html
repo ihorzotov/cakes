@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="overflow">
+<html lang="ru" class="overflow mobile">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -16,7 +16,7 @@
       <img src="img/small-logo.png" class="logo-small" alt="">
     </div>
   </div>
-  <header class="header flex-c"">
+  <header class="header flex-c" id="header">
     <div class="header-content flex-c">
       <div class="header-content__logo flex-c">
         <img src="img/small-logo.png" class="logo-small" alt="">
@@ -29,25 +29,25 @@
       <div class="header-list flex-c">
         <ul class="header-list__container flex-c">
           <li class="header-list__item">
-            <a href="#">О нас</a>
+            <a class="scroll-btn" href="#frst">О нас</a>
           </li>
           <li class="header-list__item">
-            <a href="#">Преимущества</a>
+            <a class="scroll-btn" href="#scnd">Преимущества</a>
           </li>
           <li class="header-list__item">
-            <a href="#">УТП</a>
+            <a class="scroll-btn" href="#thrd">УТП</a>
           </li>
           <li class="header-list__item">
-            <a href="#">Insta-галерея</a>
+            <a class="scroll-btn" href="#">Insta-галерея</a>
           </li>
           <li class="header-list__item">
-            <a href="#">Тортики</a>
+            <a class="scroll-btn" href="#fifth">Тортики</a>
           </li>
           <li class="header-list__item">
-            <a href="#">Отзывы</a>
+            <a class="scroll-btn" href="#seventh">Отзывы</a>
           </li>
           <li class="header-list__item">
-            <a href="#">Доставка</a>
+            <a class="scroll-btn" href="#form">Доставка</a>
           </li>
         </ul>
       </div>
@@ -59,11 +59,11 @@
   </header>
   <main class="main">
     <div class="main__frst" style="background-image: url('img/main-frst__bg.png');">
-      <div class="wrapper flex-c">
+      <div class="wrapper flex-c" id="frst">
         <div class="block-greeting">
           <h2 class="wb-title">Тортики MASAL - лучшее украшение вашего праздника!</h2>
           <span class="wb-description">Добро пожаловать на нашу сладкую страничку. У нас вы сможете порадовать своих родных и знакомых самым долгожданным и сладким моментом на празднике - тортиком! </span>
-          <a href="#" class="standart-btn wb-pink">заказать торт</a>
+          <a href="#form" class="scroll-btn standart-btn wb-pink">заказать торт</a>
         </div>
         <div class="block-product">
           <img src="img/main-frst__product.png" class="image" alt="">
@@ -71,7 +71,7 @@
       </div>
     </div>
     <div class="main__scnd">
-      <div class="wrapper">
+      <div class="wrapper" id="scnd">
         <p class="wb-large">Почему именно <span> Cake_Masal?</span></p>
         <p class="wb-description description-center">Торжественный выход, восторженные взгляды ваших гостей и восхищение виновника торжества вы найдете в наших сказочных тортиках, которые сделаны с проработкой каждой детали и только по вашим пожеланиям. Наша команда обещает вам приподнести незабываемые впечатления от сотрудничества с нами! </p>
         <div class="block-advantages flex-c">
@@ -159,18 +159,18 @@
     </div>
     <div class="main__thrd">
       <div class="bg-line line-top" style="background-image: url(img/line-top.svg);"></div>
-      <div class="bg-line line-bottom" style="background-image: url(img/line-bottom.svg);"></div>
+      <div class="bg-line line-bottom" id="thrd" style="background-image: url(img/line-bottom.svg);"></div>
       <div class="wrapper">
         <div class="hot">
           <p class="wb-large">акция!</p>
           <p class="description">При заказе торта от 7 кг в подарок <br> <b>6 капкейков</b> или <b>бесплатная доставка</b> <br> в приделах МКАД</p>
-          <a href="#" class="standart-btn wb-pink">заказать торт</a>
+          <a href="#form" class="scroll-btn standart-btn wb-pink">заказать торт</a>
         </div>
         <div class="bg-cirle-large"></div>
       </div>
       <div class="block__bg" style="background-image: url(img/cakes.png);"></div>
     </div>
-    <div class="main__fifth">
+    <div class="main__fifth" id="fifth">
       <div class="wrapper">
         <p class="wb-large">Такие тортики мы уже сделали</p>
         <div class="example-slider slider-counter flex-c-c controls-aligner">
@@ -189,7 +189,7 @@
                   </div>
                   <span class="price">10 000 <span class="currency">руб</span></span>
                 </div>
-                <a href="#" class="standart-btn wb-pink">Заказать похожий</a>
+                <a href="#form" class="scroll-btn standart-btn wb-pink">Заказать похожий</a>
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@
                   </div>
                   <span class="price">10 000 <span class="currency">руб</span></span>
                 </div>
-                <a href="#" class="standart-btn wb-pink">Заказать похожий</a>
+                <a href="#form" class="scroll-btn standart-btn wb-pink">Заказать похожий</a>
               </div>
             </div>
           </div>
@@ -227,7 +227,7 @@
                   </div>
                   <span class="price">10 000 <span class="currency">руб</span></span>
                 </div>
-                <a href="#" class="standart-btn wb-pink">Заказать похожий</a>
+                <a href="#form" class="scroll-btn standart-btn wb-pink">Заказать похожий</a>
               </div>
             </div>
           </div>
@@ -246,7 +246,7 @@
                   </div>
                   <span class="price">10 000 <span class="currency">руб</span></span>
                 </div>
-                <a href="#" class="standart-btn wb-pink">Заказать похожий</a>
+                <a href="#form" class="scroll-btn standart-btn wb-pink">Заказать похожий</a>
               </div>
             </div>
           </div>
@@ -292,7 +292,7 @@
       </div>
     </div>
     <div class="main__seventh">
-      <div class="wrapper">
+      <div class="wrapper" id="seventh">
         <p class="wb-large">Отзывы клиентов</p>
         <div class="slider-reviews slider-counter flex-c-c controls-aligner">
           <div class="slider-reviews__card">
@@ -311,7 +311,7 @@
       </div>
     </div>
     <div class="main__form">
-      <div class="wrapper">
+      <div class="wrapper" id="form">
         <p class="wb-large">Вкусный уникальный торт именно для вас!</p>
         <div class="form">
           <div class="img-left" style="background-image: url(img/form-bg_left.png);"></div>
@@ -501,6 +501,7 @@
       </div>
     </div>
     <div id="map">
+      <a href="#header" class="slide-top scroll-btn"><i class="icon-uniE010"></i></a>
       <div class="wrapper">
         <div class="map-adress">
           <p class="title">Как вы можете забрать свой тортик?</p>

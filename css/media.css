@@ -192,6 +192,7 @@
     background-size: contain;
     width: 700px;
     height: 835px;
+    max-height: 100%;
     z-index: -1;
   }
   .header-list__container {
@@ -308,7 +309,7 @@
     margin-bottom: 60px;
   }
   .main__sixth .product-slider__card {
-    /*touch-action:pan-left;*/
+    touch-action: pan-left;
     height: 460px;
   }
   .main__sixth .product-slider__card.active .product-slider__hover {

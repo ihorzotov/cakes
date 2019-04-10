@@ -14,14 +14,29 @@ APP.modalZoom = $('.modal-zoom');
 APP.zoomIMG = $('.modal-zoom__image'),
 APP.preloader = $('.preloader');
 APP.hamburger = $('.hamburger');
+APP.headerList = $('.header-list__item');
+APP.mobileMenu =  $('.header-content, .block-product');
 
 
 APP.$document.ready(function(){
+  $(document).on("click"," .scroll-btn" , function (event) {
+    event.preventDefault();
+    
+    var id  = $(this).attr('href'),
+      top = $(id).offset().top;
+      
+        $('body,html').animate({scrollTop: top}, 500);
+  });
+
+  APP.headerList.on('click', function(){
+    APP.mobileMenu.removeClass('active');
+    APP.HTML.removeClass('overflow mobile');
+  });
 
   window.onload = function(){
     APP.preloader.removeClass('active');
     setTimeout(function(){
-      APP.HTML.removeClass('overflow');
+      APP.HTML.removeClass('overflow mobile');
       $('.main__frst').addClass('animate');
     },500);
   };
@@ -228,9 +243,8 @@ APP.formSubmit.on('click', function(){
 });
 
 APP.hamburger.on('click', function(){
-  var content = $('.header-content, .block-product');
 
-  content.toggleClass('active');
+  APP.mobileMenu.toggleClass('active');
   APP.HTML.toggleClass('overflow mobile');
 });
 // 
@@ -256,7 +270,7 @@ $('.slider-counter').each(function(key, item){
 
 })//document ready
 
- APP.$document.on('touchstart', '.product-slider__card',false, handleTouchStart );
+ APP.$document.on('touchstart', '.product-slider__card',false, handleTouchStart);
  APP.$document.on('touchmove', '.product-slider__card',false, handleTouchMove);
   var xDown = null,
       yDown = null;

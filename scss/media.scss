@@ -229,6 +229,7 @@
         background-size: contain;
         width: 700px;
         height: 835px;
+        max-height: 100%;
         z-index: -1;
       }
       &__container{
@@ -354,7 +355,7 @@
       /*main__sixth*/
       margin-bottom: 60px;
       .product-slider__card{
-        /*touch-action:pan-left;*/
+        touch-action:pan-left;
         height: 460px;
         &.active{
           .product-slider__hover{
