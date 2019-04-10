@@ -308,6 +308,7 @@
     margin-bottom: 60px;
   }
   .main__sixth .product-slider__card {
+    /*touch-action:pan-left;*/
     height: 460px;
   }
   .main__sixth .product-slider__card.active .product-slider__hover {

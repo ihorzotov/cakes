@@ -354,6 +354,7 @@
       /*main__sixth*/
       margin-bottom: 60px;
       .product-slider__card{
+        /*touch-action:pan-left;*/
         height: 460px;
         &.active{
           .product-slider__hover{

@@ -256,8 +256,8 @@ $('.slider-counter').each(function(key, item){
 
 })//document ready
 
- APP.$document.on('touchstart', '.product-slider__card', handleTouchStart ,false);
- APP.$document.on('touchmove', '.product-slider__card', handleTouchMove ,false);
+ APP.$document.on('touchstart', '.product-slider__card',false, handleTouchStart );
+ APP.$document.on('touchmove', '.product-slider__card',false, handleTouchMove);
   var xDown = null,
       yDown = null;
 
